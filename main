@@ -1,1 +1,40 @@
 
+package com.company;
+import java.util.*;
+import static java.lang.Math.*;
+import java.lang.String;
+import static java.lang.System.*;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(in);
+        int i=0;
+       int N[]=new int[10];
+        while (i<10){
+            N[i++]=sc.nextInt();
+        }
+
+//       char C[]=new char[]{'t','r',24};
+//        float B[]=new float[3];
+//           i=0;
+//        while(i++<3){
+//            B[i]=(float)(sqrt(i*2));
+//        }
+//       String T[]=new String[]{"Great Britain Empire"};
+//        short P[]=new short[4];
+//        i=0;
+//        while(i++<4){
+//            P[i]= (short) ((random()*12)-3);
+//        }
+//        int M[]=new int[10];
+//         i=0;
+//        while(i<10){
+//            M[i]=sc.nextInt()*3;
+//        }
+        for (int d:N) out.print(d + "\t");
+
+
+
+        }
+
+     }
