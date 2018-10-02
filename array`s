@@ -23,8 +23,8 @@ public class Main {
         int max = 0;
         out.println("Наибольший элемент в массиве N");
         while (i < 10) {
-            if (N[i] >N[max] )
-                max =i;
+            if (N[i] > N[max])
+                max = i;
             i++;
         }
         out.println(N[max]);
@@ -63,16 +63,14 @@ public class Main {
         out.println(T[T.length - 1]);
         short P[] = new short[4];
         i = 0;
-        while (i < 4) {
-            P[i] = (short) ((random() * 2) - 3);
-            i++;
-        }
-        i = 0;
         int p = 0;
         while (i < 4) {
+            P[i] = (short) ((random() * 2) - 3);
             p += (P[i] < 0) ? P[i++] : 0;
+            i++;
         }
-        out.print("Сумма отрицательных элеметнов");
+       
+        out.println("Сумма отрицательных элеметнов");
         out.println(p);
 
         out.println("Введите массив M");
