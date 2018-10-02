@@ -11,7 +11,6 @@ import static java.lang.System.out;
 public class Main {
 
     public static void main(String[] args) {
-        int a = 0;
         Scanner sc = new Scanner(in);
         int i = 0;
         int N[] = new int[10];
@@ -24,33 +23,29 @@ public class Main {
         int max = 0;
         out.println("Наибольший элемент в массиве N");
         while (i < 10) {
-            if (N[i++] > max)
-                max = N[i - 1];
+            if (N[i] >N[max] )
+                max =i;
+            i++;
         }
-        out.println(max);
+        out.println(N[max]);
 
-        char C[] = new char[]{'t', 'r', 24};
+        char C[] = new char[]{'t', '$', 24};
         i = 0;
         out.println("-----");
-        while (i < 3) {
-            if (C[i] == '$') {
-                out.println(i);
-
-            } else if (a < 1) {
-                out.println("No characters");
-                a++;
-            }
-
+        while (i < 3 && C[i] != '$') {
             i++;
-
         }
+
+        out.println((i == 3) ? "No characters" : i);
+
+
         out.println("-----");
         float B[] = new float[3];
         i = 0;
         while (i < 3) {
             B[i++] = (float) (sqrt(i * 2));
         }
-        i=0;
+        i = 0;
         int b = 0;
         while (i < 3) {
             if (B[i++] % 1 == 0) {
@@ -69,13 +64,13 @@ public class Main {
         short P[] = new short[4];
         i = 0;
         while (i < 4) {
-            P[i] = (short) ((random()*2) - 3);
+            P[i] = (short) ((random() * 2) - 3);
             i++;
         }
         i = 0;
         int p = 0;
         while (i < 4) {
-            p+=(P[i]<0)?P[i++]:0;
+            p += (P[i] < 0) ? P[i++] : 0;
         }
         out.print("Сумма отрицательных элеметнов");
         out.println(p);
@@ -88,11 +83,11 @@ public class Main {
         }
 
         out.println("Массив M после сортировки");
-        i = 0;
-        System.out.print("\nSorted: \n");
         Arrays.sort(M);
-        while (i < M.length) {
-            out.print(M[i++] + "\t");
+        for (int d : M
+                ) {
+            out.print(d + "\t");
+
         }
     }
 }
