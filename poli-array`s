@@ -39,10 +39,21 @@ public class Main {
                 for (int z=0;z<B[i][j].length;z++){
                     B[i][j][z]= (float) (Math.sqrt(pow((random()*100),3)));
                     out.print(B[i][j][z]+"\t");
-                }out.println("");
+                }out.println();
             }out.println("-----");
         }
-        
+        String[] T={"HI","Dear","Mr",".","Mark"};
+        short[][][][] P=new short[5][4][3][2];
+        for(int i=0;i<P.length;i++){
+            for(int j=0;j<P[i].length;j++){
+                for(int z=0;z<P[i][j].length;z++){
+                    for(int v=0;v<P[i][j][z].length;v++){
+                        P[i][j][z][v]=(short)(random()*100);
+                        out.print(P[i][j][z][v]+"\t");
+                    }out.println();
+                }out.println();
+            }out.println("-----");
+        }
 //        double [][] B=new double[3][5];
 //
 //        for(int  i=0;i<B.length;i++){
