@@ -1,0 +1,56 @@
+package com.company;
+
+import java.util.Scanner;
+
+import static java.lang.Math.pow;
+import static java.lang.Math.random;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(in);
+
+        int [] N=new int[10];
+        for(int i=0;i<N.length;i++){
+            N[i]=sc.nextInt();
+        }
+        for (int d:N) {out.print(d+"\t");
+
+        }
+        out.println();
+        char [][] C={
+                {'s','$','^'},
+                {'g','#','`'},
+                {'b','t','g'},
+                {'<','a','x'},
+                {'v','b','>'}
+                  };
+      for(int i=0;i<C.length;i++){
+          for(int j=0;j<C[i].length;j++){
+              out.print(C[i][j]+"\t");
+          }
+          out.println();
+      }
+
+        float [][][] B=new float[2][3][2];
+        for(int i=0;i<B.length;i++){
+            for(int j=0;j<B[i].length;j++){
+                for (int z=0;z<B[i][j].length;z++){
+                    B[i][j][z]= (float) (Math.sqrt(pow((random()*100),3)));
+                    out.print(B[i][j][z]+"\t");
+                }out.println("");
+            }out.println("-----");
+        }
+        
+//        double [][] B=new double[3][5];
+//
+//        for(int  i=0;i<B.length;i++){
+//            for (int j=0;j<B[i].length;j++){
+//                B[i][j]=sc.nextDouble();
+//            }
+//        }
+//        int
+//        while()
+    }
+}
