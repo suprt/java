@@ -1,0 +1,72 @@
+package com.company;
+
+import java.util.Scanner;
+
+import static java.lang.Math.pow;
+import static java.lang.Math.random;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(in);
+        int[][] m = new int[15][3];
+        int[] k = new int[3];
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[i].length; j++) {
+                m[i][j] = (int) (random() * 100);
+                out.print(m[i][j] + "\t");
+            }
+            out.println();
+        }
+        out.println();
+//        k=m[2];
+//        for(int i=0;i<k.length;i++){
+//
+//            out.print(k[i]+"\t");
+//        }out.println();
+        int r[] = new int[m.length];
+        for (int i = 0; i < m.length; i++) {
+            r[i] = m[i][2];
+            out.print(r[i] + "\t");
+
+        }//вывод столбца
+        out.println();
+        for (int i = 0; i < m[i].length; i++) {
+            for (int j = 0; j < m.length; j++) {
+                k[i] += m[j][i];
+            }
+            out.println(k[i]);
+        }
+        int f = Integer.MIN_VALUE;
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[i].length; j++) {
+                if (m[i][j] > f) {
+                    f = m[i][j];
+                }
+            }
+
+
+        }
+        out.println("Максимальный элемент\n" + f);
+        int min=Integer.MAX_VALUE;
+        for (int i = 0; i < m[i].length; i++) {
+            f = Integer.MIN_VALUE;
+
+            for (int j = 0; j < m.length; j++) {
+                if (m[j][i] > f) {
+                    f = m[j][i];
+                }
+            }
+            if(f<min){
+              min=f;
+            }
+            out.println("Максимальный элемент "+i+" столбца\n"+f);
+
+        }out.println("Минимальный из максимальных\n"+min);
+         out.println("Введите n");
+        int n=sc.nextInt();
+        int [][] N=new int[n][n];
+         
+    }
+}
