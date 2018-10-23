@@ -1,0 +1,13 @@
+package com.company;
+import static java.lang.System.out;
+
+public class обувь {
+    String материал="";
+    String цвет;
+    int  размер;
+    boolean водостойкость;
+   public  void about_info(){
+       out.print("\nцвет: "+цвет+"\n"+"водостойкость: "+водостойкость+"\nразмер: "+размер+"\nматериал: "+материал);
+
+   }
+}
